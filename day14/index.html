@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="plugsin/font-awesome-4.3.0/css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/plugsin.css"/>
+    <link rel="stylesheet" href="css/test.css"/>
+    <link rel="stylesheet" href="css/time.css"/>
+    <style>
+        .return {
+                background-image:url("img/sprite-new.png");
+        }
+
+        #pao {
+            font-size: 15px;
+
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="w">
+        <div class="pg-header">
+            <div class="top-logo left">
+                <span>ROOT</span>
+            </div>
+            <div class="top-menu left">
+                <ul>
+                    <li><a href="/api/v1.0/tree_index/">资产列表</a></li>
+                    <li class="active"><a href="/home/summary">配置管理</a></li>
+                </ul>
+            </div>
+
+
+
+            <div class="top-account right">
+                <ul>
+                    <li class="top-menu-item">
+                        <span class="login-name">admin</span>
+                        <span class="fa fa-user font24"></span>
+                        <div class="child-menu clearfix hide">
+                            <ul>
+                                <li><a href="/user/index/">个人信息</a></li>
+                                <li><a href="/account/logout/">退出</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+
+            <div class="top-search right">
+                <div class="search-wrapper">
+                    <form id="GlobalSearch" action="/home/search/" method="GET">
+                        <input class="input left" id="GlobalSearchIp" name="ips" placeholder="Search" value="">
+                        <input class="hide" name="page" id="GlobalSearchPage" value="1">
+                        <a class="btn left" type="submit" onclick="DoGlobalSearch();" style="cursor:pointer;"><i class="fa fa-search" style="color:#ABAAAA;"></i></a>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="pg-body">
+            <div class="body-tree-menu left" id="scalable-menu">
+                <div class="scalable-menu-title" style="position:relative;">
+                    <!--<div class="summary-title">-->
+
+                    <!--</div>-->
+
+                </div>
+                <div class="scalable-menu-body">
+                    <div class="item">
+                        <div class="title clearfix">
+                            <div class="left"><i class="fa fa-indent"></i><span>资产管理</span></div>
+                            <div class="right"><i class="fa fa-caret-down fa-caret-up"></i></div>
+                        </div>
+                        <div class="body">
+                            <a id="home_summary" class="option clearfix selected" href="/home/summary/">
+                                <div>
+                                    <img class="left" src="img/layout/dash.png" alt="">
+                                    <span class="display left">资产概要</span>
+                                </div>
+                            </a>
+
+                            <a id="asset_list" class="option clearfix" href="/asset/list/">
+                                <div href="/asset/list/">
+                                    <img class="left" src="img/layout/dash.png" alt="">
+                                    <span class="display left">资产列表</span>
+                                </div>
+                            </a>
+                            <a id="asset_alteration" class="option clearfix" href="/asset/alteration/">
+                                <div>
+                                    <img class="left" src="img/layout/dash.png" alt="">
+                                    <span class="display left">资产变更</span>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="item">
+                        <div class="title clearfix">
+                            <div class="left"><i class="fa fa-user"></i><span>用户中心</span></div>
+                            <div class="right"><i class="fa fa-caret-down"></i></div>
+                        </div>
+                        <div class="body hide">
+                            <a id="user_index" class="option clearfix" href="/user/index/">
+                                <div>
+                                    <img class="left" src="img/layout/dash.png" alt="">
+                                    <span class="display left">用户信息</span>
+                                </div>
+                            </a>
+                            <a id="user_changepwd" class="option clearfix" href="/user/changepwd/">
+                                <div>
+                                    <img class="left" src="img/layout/dash.png" alt="">
+                                    <span class="display left">密码修改</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div id="body_content" class="body-content left">
+
+                <a style="position: fixed; right: 50px;bottom: 30px;text-decoration: none; font-size: larger; color: black" href="#tab-menu-title">返回顶部</a>
+                <div id="pao">
+                    <marquee>Talk is cheap, show me the code</marquee>
+                </div>
+                <div class="main-content">
+
+                    <!-- 遮罩层开始 -->
+                    <div id="shade" class="shade hide"></div>
+                    <!-- 遮罩层结束 -->
+                    <!-- 加载层开始 -->
+                    <div id="loading" class="loading hide"></div>
+                    <!-- 加载层结束 -->
+                </div>
+
+
+                 <div class="tab-menu-box">
+                    <div class="menu">
+                        <ul id="tab-menu-title">
+                            <li class="" content-to="1">区域视图</li>
+                            <li content-to="2" class="current">分类视图</li>
+                            <li content-to="3" class="">报表视图</li>
+                        </ul>
+                    </div>
+
+                    <div id="tab-menu-body" class="content">
+                        <div content="1" class="clearfix hide">
+                            <div content="3" class="clearfix">
+                            <div class="left" style="width:240px;height:200px;">&nbsp;</div>
+                            <div class="left clearfix" style="border-left:2px dashed #ddd;width:70%;">
+
+                                <div style="position:relative;">
+                                    <div class="time">2015-05-28 03:04:21 </div>
+                                    <div class="record-arrow"></div>
+                                    <div class="record">
+                                        NewDevice with AssetId [4647] has been inserted by Puppet agent
+                                        <div class="auther">
+                                            <span><i class="fa fa-user"></i></span>
+                                            <span>cmdb_reporter</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style="position:relative;">
+                                    <div class="time">2015-05-28 03:04:21 </div>
+                                    <div class="record-arrow"></div>
+                                    <div class="record">
+                                        AssetID:[4647], model:[None], field:[os_release], value has changed from [None] to [2008 R2]
+                                        <div class="auther">
+                                            <span><i class="fa fa-user"></i></span>
+                                            <span>cmdb_reporter</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style="position:relative;">
+                                    <div class="time">2015-05-28 03:04:21 </div>
+                                    <div class="record-arrow"></div>
+                                    <div class="record">
+                                        AssetID:[4647], model:[None], field:[os_distribution], value has changed from [None] to [windows]
+                                        <div class="auther">
+                                            <span><i class="fa fa-user"></i></span>
+                                            <span>cmdb_reporter</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style="position:relative;">
+                                    <div class="time">2015-05-28 03:04:21 </div>
+                                    <div class="record-arrow"></div>
+                                    <div class="record">
+                                        AssetID:[4647], model:[None], field:[os_type], value has changed from [None] to [windows]
+                                        <div class="auther">
+                                            <span><i class="fa fa-user"></i></span>
+                                            <span>cmdb_reporter</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style="position:relative;">
+                                    <div class="time">2015-05-28 03:04:21 </div>
+                                    <div class="record-arrow"></div>
+                                    <div class="record">
+                                        AssetID:[4647], model:[None], field:[sn], value has changed from [openstack] to [OpenStack_44454c4c-3500-1054-8031-c8c04f5a3432]
+                                        <div class="auther">
+                                            <span><i class="fa fa-user"></i></span>
+                                            <span>cmdb_reporter</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        </div>
+                        <div content="2" class="clearfix hide">
+
+                        </div>
+                        <div content="3" class="clearfix">
+
+                        </div>
+                    </div>
+                </div>
+                <div style="padding: 0px 0px 0px 600px;">2016 Copyright: JiWen Zheng</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/layout.js"></script>
+    <script type="text/javascript" src="js/plugsin.js"></script>
+    <script type="text/javascript">
+            $(function () {
+                BindTabMenu('#tab-menu-title', '#tab-menu-body');
+            });
+    </script>
+
+
+
+</body>
+</html>

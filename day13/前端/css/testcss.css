@@ -1,0 +1,11 @@
+input[type='text']{ width:200px; height:30px; } 
+.testdiv {				
+				position:absolute;
+				left:300px;
+				top:150px;
+		}
+.testdiv2 {
+				position:absolute;
+				left:600px;
+				bottom:50px	
+}

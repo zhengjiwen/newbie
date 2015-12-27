@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>抽匣</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+      .text_input {
+        padding: 0px 0px 0px 260px;
+        margin: 0px 0px 0px 0px;
+      }
+      .pg-body {
+            clear: both;
+            background-color: #ededed;
+      }
+      div {
+        display: block;
+      }
+
+      .content {
+            width: 960px;
+            margin: 0 auto;
+            overflow: hidden;
+            height: auto !important;
+            min-height: 713px;
+            padding: 6px 28px 60px;
+            background-color: #fff;
+      }
+
+      .nav-test {
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+      }
+      .navbar-test {
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+      }
+      .list {
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+      }
+      .button {
+        padding: 14px 17px 0px 29px;
+        margin: 0px 6px 0px 0px;
+      }
+      .ttt {
+        padding: 0px 30px 0px 0px;
+        margin: 0px 0px 0px 0px;
+      }
+      .nav-top-area {
+        border-bottom: 1px solid #ccdcef;
+        overflow: hidden;
+        clear: both;
+        text-decoration: none;
+      }
+      .child-nav {
+        float: left;
+
+      }
+      .child-nav a {
+          text-decoration: none;
+      }
+      .child-nav .hotbtn {
+        margin-left: 3px;
+      }
+      .child-nav .active {
+        background-position: 0 -299px;
+        color: #333;
+        text-decoration: none;
+      }
+      .child-nav a {
+        display: inline-block;
+        width: 60px;
+        height: 26px;
+        line-height: 26px;
+        margin-top: 3px;
+        margin-bottom: 13px;
+        color: #369;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+      }
+      .icons {
+          background: url("image/tip.png");
+      }
+      a {
+          cursor:pointer;
+                    text-decoration: none;
+      }
+      .sort-nav .active {
+          color: #b4b4b4;
+          text-decoration: none;
+      }
+      .sort-nav a {
+          margin-left: 19px;
+          color: #390;
+          text-align: center;
+          text-decoration: none;
+      }
+      .sort-nav {
+          margin-left: 218px;
+          float: left;
+          margin-top: -35px;
+      }
+      .publish-btn {
+          background-color: #84a42b;
+          border: 1px solid #8aab30;
+          color: #fff;
+          display: inline-block;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          width: 134px;
+          float: right;
+          font-size: 14px;
+          padding: 0px 0px 0px 0px;
+          margin: -5px 0px 0px 0px;
+      }
+      .publish-btn .n1 {
+          height: 12px;
+          width: 11px;
+          background-position: 0 -184px;
+          display: inline-block;
+      }
+
+      .ico {
+          background: url("image/icon.png");
+      }
+      .publish-btn .n2 {
+          color: #fff;
+          font-weight: normal;
+          margin-left: 8px;
+      }
+      .content-L {
+          width: 560px;
+          overflow: hidden;
+          margin-top: 3px;
+          float: left;
+      }
+      .content-R {
+          width: 300px;
+          padding-top: 4px;
+          float: right;
+      }
+      .chat-area {
+          height: 475px;
+          position: relative;
+      }
+      .i {
+          width: 30px;
+          height: 29px;
+          display: inline-block;
+          border: 1px solid #e0e0e0;
+          border-left: 0;
+          background-color: #f4f4f4;
+          float: left;
+      }
+      .input-search {
+          margin: 0px 0px 0px 0px;
+
+        height: 30px;
+        width: 130px;
+          padding: 0px 0px 0px 0px;
+          float: left;
+          border: 0px solid;
+      }
+
+      .search {
+          padding: 0px 0px 0px 0px;
+          margin: 0px 0px 0px 0px;
+      }
+      .search-icon{
+        padding: 5px 0px 0px 7px;
+        margin: 0px 0px 0px 0px;
+          width: 30px;
+          height: 30px;
+          float: left;
+          background-color:#fff;
+
+          border-right: none;
+      }
+      #gotop {
+        background: url("image/Back-to-the-top_38_78.png") 0 0 no-repeat;
+        bottom: 30px;
+        left: 86%;
+        cursor: pointer;
+        display: none;
+        height: 38px;
+        width: 38px;
+        position: fixed;
+        z-index: 2;
+      }
+      .logo {
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+      }
+      .pg-bg {
+        padding: 30px 0px 0px 10px;
+        margin: 0px 0px 0px 0px;
+      }
+      .hide {
+        display: none;
+      }
+        .top-band {
+            overflow: hidden;
+            margin-top: 38px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        .top-band .top-band-type {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+        em, i {
+            font-style: normal;
+        }
+        .content-list {
+            position: relative;
+        }
+        .content-list .item {
+            clear: both;
+            padding-top: 10px;
+            border-bottom: 1px solid #dce7f4;
+            overflow: hidden;
+            position: relative;
+        }
+        .text-foot {
+            margin: 0 auto;
+            width: 960px;
+            font-size: 12px;
+            background-color: #fff;
+            padding: 0 28px;
+            overflow: hidden;
+        }
+        .text-foot .foot-nav {
+            padding: 30px 75px 0px 0px;
+            margin: 30px 60px 0px 0px;
+            text-align: center;
+            border-top: 1px solid #ccdcef;
+            position: relative;
+
+        }
+        .text-foot .foot-nav a {
+            color: #369;
+            margin-left: 10px;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+        .content-list .item .news-pic {
+            float: right;
+            margin-left: 10px;
+            padding-bottom: 5px;
+        }
+        .content-list .item .news-pic img {
+            width: 60px;
+            height: 60px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 1px;
+            vertical-align: top;
+        }
+        .content-list .item .news-content {
+            padding-top: 1px;
+        }
+        .content-list .item .news-content .part1 {
+            line-height: 20px;
+        }
+        .content-list .item .news-content .part1 .show-content {
+            font-size: 14px;
+            color: #369;
+            font-weight: bold;
+        }
+        .content-list .item .news-content .part1 a {
+            color: #369;
+            font-size: 14px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .null-item {
+            height: 0;
+            clear: left;
+            overflow: hidden;
+        }
+        .content-list .item .content-source {
+            color: #b4b4b4;
+            margin-left: 7px;
+        }
+        .timeIntoPool {
+            display: none;
+        }
+        .content-list .item .news-content .part2 {
+            padding-top: 6px;
+            padding-top: 5px\9;
+            color: #ccc;
+            margin-bottom: 12px;
+            margin-bottom: 13px\9;
+        }
+        .content-list .item .news-content .part2 .time-into {
+            color: #ccc;
+            vertical-align: 0\9;
+            margin-right: 7px;
+        }
+        .content-list .item .news-content .part2 .left {
+            margin-left: 7px;
+        }
+        .content-list .item .news-content .part2 span, .content-list .item .news-content .part2 a {
+            display: inline-block;
+        }
+                .dialog-content {
+            padding: 15px 20px 0;
+            background-color: #fff;
+            overflow: hidden;
+        }
+        .nobrder {
+            border-bottom: 1px solid #fff;
+        }
+        .W {
+            width: auto !important;
+            width: auto;
+        }
+        .tab-tags {
+            height: 36px;
+            width: 630px;
+            position: relative;
+        }
+        .tab-tags .w-active {
+            color: #787878;
+            background-position: 0 -74px;
+            border-bottom: 1px solid #fff;
+        }
+        .tab-tags .tb {
+            float: left;
+            height: 35px;
+            line-height: 35px;
+            width: 90px;
+            color: #369;
+            font-weight: bold;
+            font-size: 14px;
+            margin-right: 4px;
+            cursor: pointer;
+            text-align: center;
+            background: url("image/tag.png") no-repeat 0 0;
+            position: relative;
+            z-index: 2;
+        }
+        .tab-tags a {
+                                text-decoration: none;
+        }
+
+        .content-list .item .news-content .part2 b {
+            font-weight: normal;
+            margin-left: 7px;
+            vertical-align: 2px;
+            text-decoration: none;
+
+        }
+        .content-list .item .news-content .part2 b {
+            color: #99aecb;
+            font-size: 14px;
+            font-weight: bold;
+
+        }
+        .hot {
+            float: right;
+
+            margin: 0px 0px 0px 8px;
+        }
+        .comment-box {
+            border: 1px solid #cbdcee;
+            background-color: #f6f6f6;
+            padding: 12px 15px 0;
+            margin-bottom: 12px;
+            width: 598px;
+         
+        }
+    </style>
+  </head>
+  <body>
+  <!--head-->
+    <div>
+      <nav class="navbar navbar-default navbar-test">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header logo">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand button" href="#">抽匣</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse nav-test" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav list">
+              <li id="top"  class="active"><a href="#">全部 <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">精选</a></li>
+              <li><a href="#">图片</a></li>
+              <li><a href="#">问答</a></li>
+              <li><a href="#">段子</a></li>
+                <li><a href="#">这个</a></li>
+                <li><a href="#">那个</a></li>
+                <li><a href="#">占位</a></li>
+            </ul>
+            <div class="search">
+              <form class="navbar-form navbar-left" role="search">
+                <div class="form-group text_input">
+                  <input type="text" class="input-search" placeholder="  Search">
+                  <span class="search-icon"><a><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></span>
+                </div>
+              </form>
+            </div>
+            <ul class="nav navbar-nav navbar-right ttt">
+              <li><a href="#">注册</a></li>
+              <li><a herf="#">登入</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </div>
+  <!--body-->
+    <div class="pg-body">
+      <div class="content">
+        <div class="content-L">
+            <!--pg left-->
+           <div class="nav-top-area">
+            <div class="child-nav">
+              <a class="hotbtn active icons">最热</a>
+              <a>最新</a>
+              <a>发布</a>
+            </div>
+            <div class="sort-nav">
+              <a class="active">即时排序</a>
+              <a class="newbtn">24小时</a>
+              <a class="newbtn">3天</a>
+              <a class="publish-btn" data-toggle="modal" data-target="#myModal">
+                <span class="ico n1"></span><span class="n2">发布</span>
+                  <!--<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">-->
+  <!--Launch demo modal-->
+<!--</button>-->
+
+              </a>
+            </div>
+           </div>
+            <!--内容列表-->
+            <div class="content-list">
+              <div class="item">
+                    <div class="timeIntoPool">1457101440881000,1457102117787000</div>
+                        <div class="news-pic"><img    src="image/text.png" alt="抽屉新热榜" style="display: inline; cursor: -webkit-zoom-in;"></div>
+							<div class="null-item"></div>
+							<div class="news-content"   >
+								<div class="part1">
+                                    <a class="show-content" target="_blank"  >
+                                            自从跟大王学完python之后,感觉屌爆了。。。
+                                    </a>
+                                    <span class="content-source">-ww3.sinaimg.cn</span>
+                                    <a class="n2"><span class="content-kind">42区</span></a>
+								</div>
+
+                                <div class="part2" >
+									<a class="digg-a" title="推荐"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><b>7</b><i style="display:none">8076081</i></a>
+									<a class="discus-a"  title="" flag="true" onclick="Comment(this);"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span><b>11</b></a>
+									<a class="collect-a" title="加入私藏" ><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><b>私藏</b></a>
+									<a class="user-a"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><b>隔壁</b></a>
+									<span class="left time-into"><a class="time-a"  target="_blank"><b style="color: #e59373;">1小时36分钟前</b></a><i class="hot">入热榜</i></span>
+								 </div>
+                                <!--评论-->
+
+                                <div class="comment-box-area hide"   style="display: block;">
+								<div class="pinglun arrow"   style="left: 63px;"></div>
+								<a class="pinglun close-comt" title="关闭"   lang="8076868"></a>
+								<div class="corner comment-box"  >
+
+									<div class="loading-ico loading-ico-top"   style="margin-left: 230px; display: none;">加载中，请稍候...</div>
+									<div class="comment-box-top"   style="display: block;">
+										<div class="tip-1">最热评论(<span  >3</span>)</div>
+										<div class="tip-2"><a  target="_blank"><em class="pinglun em1"></em><span>去评论页面</span></a></div>
+									</div>
+									<!-- 评论树形 -->
+									<ul class="filetree comment-list-top-2 treeview"   style="background: none;">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>1</li>
+                                    </ul>
+									<!-- 谣言类别显示相信还是置疑选项 -->
+
+
+									<!-- 判断该新闻评论是否关闭 -->
+
+
+									<!-- 评论输入框和回复框 -->
+									<div class="huifu-top-box"   style="display: block;">
+										<div class="box-l txt-input-area-div-top corner no-corner-bottom">
+                                            <div     class="lab-comment-top" style="display: none;">回复  <span  ></span>:</div>
+											<!-- 针对谣言文本输入框无效 -->
+
+												<textarea lang="8076868" maxlength="150" name="txt-huifu-top"   class="txt-huifu txt-huifu-top" style="text-indent: 0px; height: 20px; resize: none;"></textarea>
+
+										</div>
+										<div class="box-r">
+											<a   lang="8076868"   class="pub-icons add-pub-btn add-pub-btn-unvalid">评论</a>
+											<a     class="loading-ico loading-ico-top pub-loading-top">发布中...</a>
+										</div>
+									</div>
+
+									<div class="tip-3"   style="display: block;">
+										<a   class="hiddenCom-Btn" lang="8076868"><em class="pinglun em2"></em><span>收起</span></a>
+									</div>
+									<div class="write-error-box-top">
+										<div class="write-error-desc"   style="display: none;"></div>
+									</div>
+								</div>
+								<input type="hidden"    value="1">
+								</div>
+
+
+
+							</div>
+                </div>
+              <div class="item">
+                    <div class="timeIntoPool">1457101440881000,1457102117787000</div>
+                        <div class="news-pic"><img    src="image/text.png" alt="抽屉新热榜" style="display: inline; cursor: -webkit-zoom-in;"></div>
+							<div class="null-item"></div>
+							<div class="news-content"   >
+								<div class="part1">
+                                    <a class="show-content" target="_blank"  >
+                                            自从跟大王学完python之后,感觉屌爆了。。。
+                                    </a>
+                                    <span class="content-source">-ww3.sinaimg.cn</span>
+                                    <a class="n2"><span class="content-kind">42区</span></a>
+								</div>
+
+                                <div class="part2" >
+									<a class="digg-a" title="推荐"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><b>7</b><i style="display:none">8076081</i></a>
+									<a class="discus-a"  title="" flag="true" onclick="Comment(this);"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span><b>11</b></a>
+									<a class="collect-a" title="加入私藏" ><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><b>私藏</b></a>
+									<a class="user-a"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><b>隔壁</b></a>
+									<span class="left time-into"><a class="time-a"  target="_blank"><b style="color: #e59373;">1小时36分钟前</b></a><i class="hot">入热榜</i></span>
+								 </div>
+                                <!--评论-->
+
+                                <div class="comment-box-area hide"   style="display: block;">
+								<div class="pinglun arrow"   style="left: 63px;"></div>
+								<a class="pinglun close-comt" title="关闭"   lang="8076868"></a>
+								<div class="corner comment-box"  >
+
+									<div class="loading-ico loading-ico-top"   style="margin-left: 230px; display: none;">加载中，请稍候...</div>
+									<div class="comment-box-top"   style="display: block;">
+										<div class="tip-1">最热评论(<span  >3</span>)</div>
+										<div class="tip-2"><a  target="_blank"><em class="pinglun em1"></em><span>去评论页面</span></a></div>
+									</div>
+									<!-- 评论树形 -->
+									<ul class="filetree comment-list-top-2 treeview"   style="background: none;">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>1</li>
+                                    </ul>
+									<!-- 谣言类别显示相信还是置疑选项 -->
+
+
+									<!-- 判断该新闻评论是否关闭 -->
+
+
+									<!-- 评论输入框和回复框 -->
+									<div class="huifu-top-box"   style="display: block;">
+										<div class="box-l txt-input-area-div-top corner no-corner-bottom">
+                                            <div     class="lab-comment-top" style="display: none;">回复  <span  ></span>:</div>
+											<!-- 针对谣言文本输入框无效 -->
+
+												<textarea lang="8076868" maxlength="150" name="txt-huifu-top"   class="txt-huifu txt-huifu-top" style="text-indent: 0px; height: 20px; resize: none;"></textarea>
+
+										</div>
+										<div class="box-r">
+											<a   lang="8076868"   class="pub-icons add-pub-btn add-pub-btn-unvalid">评论</a>
+											<a     class="loading-ico loading-ico-top pub-loading-top">发布中...</a>
+										</div>
+									</div>
+
+									<div class="tip-3"   style="display: block;">
+										<a   class="hiddenCom-Btn" lang="8076868"><em class="pinglun em2"></em><span>收起</span></a>
+									</div>
+									<div class="write-error-box-top">
+										<div class="write-error-desc"   style="display: none;"></div>
+									</div>
+								</div>
+								<input type="hidden"    value="1">
+								</div>
+
+
+
+							</div>
+                </div>
+              <div class="item">
+                    <div class="timeIntoPool">1457101440881000,1457102117787000</div>
+                        <div class="news-pic"><img    src="image/text.png" alt="抽屉新热榜" style="display: inline; cursor: -webkit-zoom-in;"></div>
+							<div class="null-item"></div>
+							<div class="news-content"   >
+								<div class="part1">
+                                    <a class="show-content" target="_blank"  >
+                                            自从跟大王学完python之后,感觉屌爆了。。。
+                                    </a>
+                                    <span class="content-source">-ww3.sinaimg.cn</span>
+                                    <a class="n2"><span class="content-kind">42区</span></a>
+								</div>
+
+                                <div class="part2" >
+									<a class="digg-a" title="推荐"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><b>7</b><i style="display:none">8076081</i></a>
+									<a class="discus-a"  title="" flag="true" onclick="Comment(this);"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span><b>11</b></a>
+									<a class="collect-a" title="加入私藏" ><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><b>私藏</b></a>
+									<a class="user-a"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><b>隔壁</b></a>
+									<span class="left time-into"><a class="time-a"  target="_blank"><b style="color: #e59373;">1小时36分钟前</b></a><i class="hot">入热榜</i></span>
+								 </div>
+                                <!--评论-->
+
+                                <div class="comment-box-area hide"   style="display: block;">
+								<div class="pinglun arrow"   style="left: 63px;"></div>
+								<a class="pinglun close-comt" title="关闭"   lang="8076868"></a>
+								<div class="corner comment-box"  >
+
+									<div class="loading-ico loading-ico-top"   style="margin-left: 230px; display: none;">加载中，请稍候...</div>
+									<div class="comment-box-top"   style="display: block;">
+										<div class="tip-1">最热评论(<span  >3</span>)</div>
+										<div class="tip-2"><a  target="_blank"><em class="pinglun em1"></em><span>去评论页面</span></a></div>
+									</div>
+									<!-- 评论树形 -->
+									<ul class="filetree comment-list-top-2 treeview"   style="background: none;">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>1</li>
+                                    </ul>
+									<!-- 谣言类别显示相信还是置疑选项 -->
+
+
+									<!-- 判断该新闻评论是否关闭 -->
+
+
+									<!-- 评论输入框和回复框 -->
+									<div class="huifu-top-box"   style="display: block;">
+										<div class="box-l txt-input-area-div-top corner no-corner-bottom">
+                                            <div     class="lab-comment-top" style="display: none;">回复  <span  ></span>:</div>
+											<!-- 针对谣言文本输入框无效 -->
+
+												<textarea lang="8076868" maxlength="150" name="txt-huifu-top"   class="txt-huifu txt-huifu-top" style="text-indent: 0px; height: 20px; resize: none;"></textarea>
+
+										</div>
+										<div class="box-r">
+											<a   lang="8076868"   class="pub-icons add-pub-btn add-pub-btn-unvalid">评论</a>
+											<a     class="loading-ico loading-ico-top pub-loading-top">发布中...</a>
+										</div>
+									</div>
+
+									<div class="tip-3"   style="display: block;">
+										<a   class="hiddenCom-Btn" lang="8076868"><em class="pinglun em2"></em><span>收起</span></a>
+									</div>
+									<div class="write-error-box-top">
+										<div class="write-error-desc"   style="display: none;"></div>
+									</div>
+								</div>
+								<input type="hidden"    value="1">
+								</div>
+
+
+
+							</div>
+                </div>
+              <div class="item">
+                    <div class="timeIntoPool">1457101440881000,1457102117787000</div>
+                        <div class="news-pic"><img    src="image/text.png" alt="抽屉新热榜" style="display: inline; cursor: -webkit-zoom-in;"></div>
+							<div class="null-item"></div>
+							<div class="news-content"   >
+								<div class="part1">
+                                    <a class="show-content" target="_blank"  >
+                                            自从跟大王学完python之后,感觉屌爆了。。。
+                                    </a>
+                                    <span class="content-source">-ww3.sinaimg.cn</span>
+                                    <a class="n2"><span class="content-kind">42区</span></a>
+								</div>
+
+                                <div class="part2" >
+									<a class="digg-a" title="推荐"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><b>7</b><i style="display:none">8076081</i></a>
+									<a class="discus-a"  title="" flag="true" onclick="Comment(this);"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span><b>11</b></a>
+									<a class="collect-a" title="加入私藏" ><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><b>私藏</b></a>
+									<a class="user-a"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><b>隔壁</b></a>
+									<span class="left time-into"><a class="time-a"  target="_blank"><b style="color: #e59373;">1小时36分钟前</b></a><i class="hot">入热榜</i></span>
+								 </div>
+                                <!--评论-->
+
+                                <div class="comment-box-area hide"   style="display: block;">
+								<div class="pinglun arrow"   style="left: 63px;"></div>
+								<a class="pinglun close-comt" title="关闭"   lang="8076868"></a>
+								<div class="corner comment-box"  >
+
+									<div class="loading-ico loading-ico-top"   style="margin-left: 230px; display: none;">加载中，请稍候...</div>
+									<div class="comment-box-top"   style="display: block;">
+										<div class="tip-1">最热评论(<span  >3</span>)</div>
+										<div class="tip-2"><a  target="_blank"><em class="pinglun em1"></em><span>去评论页面</span></a></div>
+									</div>
+									<!-- 评论树形 -->
+									<ul class="filetree comment-list-top-2 treeview"   style="background: none;">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>1</li>
+                                    </ul>
+									<!-- 谣言类别显示相信还是置疑选项 -->
+
+
+									<!-- 判断该新闻评论是否关闭 -->
+
+
+									<!-- 评论输入框和回复框 -->
+									<div class="huifu-top-box"   style="display: block;">
+										<div class="box-l txt-input-area-div-top corner no-corner-bottom">
+                                            <div     class="lab-comment-top" style="display: none;">回复  <span  ></span>:</div>
+											<!-- 针对谣言文本输入框无效 -->
+
+												<textarea lang="8076868" maxlength="150" name="txt-huifu-top"   class="txt-huifu txt-huifu-top" style="text-indent: 0px; height: 20px; resize: none;"></textarea>
+
+										</div>
+										<div class="box-r">
+											<a   lang="8076868"   class="pub-icons add-pub-btn add-pub-btn-unvalid">评论</a>
+											<a     class="loading-ico loading-ico-top pub-loading-top">发布中...</a>
+										</div>
+									</div>
+
+									<div class="tip-3"   style="display: block;">
+										<a   class="hiddenCom-Btn" lang="8076868"><em class="pinglun em2"></em><span>收起</span></a>
+									</div>
+									<div class="write-error-box-top">
+										<div class="write-error-desc"   style="display: none;"></div>
+									</div>
+								</div>
+								<input type="hidden"    value="1">
+								</div>
+
+
+
+							</div>
+                </div>
+              <div class="item">
+                    <div class="timeIntoPool">1457101440881000,1457102117787000</div>
+                        <div class="news-pic"><img    src="image/text.png" alt="抽屉新热榜" style="display: inline; cursor: -webkit-zoom-in;"></div>
+							<div class="null-item"></div>
+							<div class="news-content"   >
+								<div class="part1">
+                                    <a class="show-content" target="_blank"  >
+                                            自从跟大王学完python之后,感觉屌爆了。。。
+                                    </a>
+                                    <span class="content-source">-ww3.sinaimg.cn</span>
+                                    <a class="n2"><span class="content-kind">42区</span></a>
+								</div>
+
+                                <div class="part2" >
+									<a class="digg-a" title="推荐"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><b>7</b><i style="display:none">8076081</i></a>
+									<a class="discus-a"  title="" flag="true" onclick="Comment(this);"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span><b>11</b></a>
+									<a class="collect-a" title="加入私藏" ><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><b>私藏</b></a>
+									<a class="user-a"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><b>隔壁</b></a>
+									<span class="left time-into"><a class="time-a"  target="_blank"><b style="color: #e59373;">1小时36分钟前</b></a><i class="hot">入热榜</i></span>
+								 </div>
+                                <!--评论-->
+
+                                <div class="comment-box-area hide"   style="display: block;">
+								<div class="pinglun arrow"   style="left: 63px;"></div>
+								<a class="pinglun close-comt" title="关闭"   lang="8076868"></a>
+								<div class="corner comment-box"  >
+
+									<div class="loading-ico loading-ico-top"   style="margin-left: 230px; display: none;">加载中，请稍候...</div>
+									<div class="comment-box-top"   style="display: block;">
+										<div class="tip-1">最热评论(<span  >3</span>)</div>
+										<div class="tip-2"><a  target="_blank"><em class="pinglun em1"></em><span>去评论页面</span></a></div>
+									</div>
+									<!-- 评论树形 -->
+									<ul class="filetree comment-list-top-2 treeview"   style="background: none;">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>1</li>
+                                    </ul>
+									<!-- 谣言类别显示相信还是置疑选项 -->
+
+
+									<!-- 判断该新闻评论是否关闭 -->
+
+
+									<!-- 评论输入框和回复框 -->
+									<div class="huifu-top-box"   style="display: block;">
+										<div class="box-l txt-input-area-div-top corner no-corner-bottom">
+                                            <div     class="lab-comment-top" style="display: none;">回复  <span  ></span>:</div>
+											<!-- 针对谣言文本输入框无效 -->
+
+												<textarea lang="8076868" maxlength="150" name="txt-huifu-top"   class="txt-huifu txt-huifu-top" style="text-indent: 0px; height: 20px; resize: none;"></textarea>
+
+										</div>
+										<div class="box-r">
+											<a   lang="8076868"   class="pub-icons add-pub-btn add-pub-btn-unvalid">评论</a>
+											<a     class="loading-ico loading-ico-top pub-loading-top">发布中...</a>
+										</div>
+									</div>
+
+									<div class="tip-3"   style="display: block;">
+										<a   class="hiddenCom-Btn" lang="8076868"><em class="pinglun em2"></em><span>收起</span></a>
+									</div>
+									<div class="write-error-box-top">
+										<div class="write-error-desc"   style="display: none;"></div>
+									</div>
+								</div>
+								<input type="hidden"    value="1">
+								</div>
+
+
+
+							</div>
+                </div>
+              <div class="item">
+                    <div class="timeIntoPool">1457101440881000,1457102117787000</div>
+                        <div class="news-pic"><img    src="image/text.png" alt="抽屉新热榜" style="display: inline; cursor: -webkit-zoom-in;"></div>
+							<div class="null-item"></div>
+							<div class="news-content"   >
+								<div class="part1">
+                                    <a class="show-content" target="_blank"  >
+                                            自从跟大王学完python之后,感觉屌爆了。。。
+                                    </a>
+                                    <span class="content-source">-ww3.sinaimg.cn</span>
+                                    <a class="n2"><span class="content-kind">42区</span></a>
+								</div>
+
+                                <div class="part2" >
+									<a class="digg-a" title="推荐"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><b>7</b><i style="display:none">8076081</i></a>
+									<a class="discus-a"  title="" flag="true" onclick="Comment(this);"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span><b>11</b></a>
+									<a class="collect-a" title="加入私藏" ><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><b>私藏</b></a>
+									<a class="user-a"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><b>隔壁</b></a>
+									<span class="left time-into"><a class="time-a"  target="_blank"><b style="color: #e59373;">1小时36分钟前</b></a><i class="hot">入热榜</i></span>
+								 </div>
+                                <!--评论-->
+
+                                <div class="comment-box-area hide"   style="display: block;">
+								<div class="pinglun arrow"   style="left: 63px;"></div>
+								<a class="pinglun close-comt" title="关闭"   lang="8076868"></a>
+								<div class="corner comment-box"  >
+
+									<div class="loading-ico loading-ico-top"   style="margin-left: 230px; display: none;">加载中，请稍候...</div>
+									<div class="comment-box-top"   style="display: block;">
+										<div class="tip-1">最热评论(<span  >3</span>)</div>
+										<div class="tip-2"><a  target="_blank"><em class="pinglun em1"></em><span>去评论页面</span></a></div>
+									</div>
+									<!-- 评论树形 -->
+									<ul class="filetree comment-list-top-2 treeview"   style="background: none;">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>1</li>
+                                    </ul>
+									<!-- 谣言类别显示相信还是置疑选项 -->
+
+
+									<!-- 判断该新闻评论是否关闭 -->
+
+
+									<!-- 评论输入框和回复框 -->
+									<div class="huifu-top-box"   style="display: block;">
+										<div class="box-l txt-input-area-div-top corner no-corner-bottom">
+                                            <div     class="lab-comment-top" style="display: none;">回复  <span  ></span>:</div>
+											<!-- 针对谣言文本输入框无效 -->
+
+												<textarea lang="8076868" maxlength="150" name="txt-huifu-top"   class="txt-huifu txt-huifu-top" style="text-indent: 0px; height: 20px; resize: none;"></textarea>
+
+										</div>
+										<div class="box-r">
+											<a   lang="8076868"   class="pub-icons add-pub-btn add-pub-btn-unvalid">评论</a>
+											<a     class="loading-ico loading-ico-top pub-loading-top">发布中...</a>
+										</div>
+									</div>
+
+									<div class="tip-3"   style="display: block;">
+										<a   class="hiddenCom-Btn" lang="8076868"><em class="pinglun em2"></em><span>收起</span></a>
+									</div>
+									<div class="write-error-box-top">
+										<div class="write-error-desc"   style="display: none;"></div>
+									</div>
+								</div>
+								<input type="hidden"    value="1">
+								</div>
+
+
+
+							</div>
+                </div>
+              <div class="item">
+                    <div class="timeIntoPool">1457101440881000,1457102117787000</div>
+                        <div class="news-pic"><img    src="image/text.png" alt="抽屉新热榜" style="display: inline; cursor: -webkit-zoom-in;"></div>
+							<div class="null-item"></div>
+							<div class="news-content"   >
+								<div class="part1">
+                                    <a class="show-content" target="_blank"  >
+                                            自从跟大王学完python之后,感觉屌爆了。。。
+                                    </a>
+                                    <span class="content-source">-ww3.sinaimg.cn</span>
+                                    <a class="n2"><span class="content-kind">42区</span></a>
+								</div>
+
+                                <div class="part2" >
+									<a class="digg-a" title="推荐"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><b>7</b><i style="display:none">8076081</i></a>
+									<a class="discus-a"  title="" flag="true" onclick="Comment(this);"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span><b>11</b></a>
+									<a class="collect-a" title="加入私藏" ><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><b>私藏</b></a>
+									<a class="user-a"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><b>隔壁</b></a>
+									<span class="left time-into"><a class="time-a"  target="_blank"><b style="color: #e59373;">1小时36分钟前</b></a><i class="hot">入热榜</i></span>
+								 </div>
+                                <!--评论-->
+
+                                <div class="comment-box-area hide"   style="display: block;">
+								<div class="pinglun arrow"   style="left: 63px;"></div>
+								<a class="pinglun close-comt" title="关闭"   lang="8076868"></a>
+								<div class="corner comment-box"  >
+
+									<div class="loading-ico loading-ico-top"   style="margin-left: 230px; display: none;">加载中，请稍候...</div>
+									<div class="comment-box-top"   style="display: block;">
+										<div class="tip-1">最热评论(<span  >3</span>)</div>
+										<div class="tip-2"><a  target="_blank"><em class="pinglun em1"></em><span>去评论页面</span></a></div>
+									</div>
+									<!-- 评论树形 -->
+									<ul class="filetree comment-list-top-2 treeview"   style="background: none;">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>1</li>
+                                    </ul>
+									<!-- 谣言类别显示相信还是置疑选项 -->
+
+
+									<!-- 判断该新闻评论是否关闭 -->
+
+
+									<!-- 评论输入框和回复框 -->
+									<div class="huifu-top-box"   style="display: block;">
+										<div class="box-l txt-input-area-div-top corner no-corner-bottom">
+                                            <div     class="lab-comment-top" style="display: none;">回复  <span  ></span>:</div>
+											<!-- 针对谣言文本输入框无效 -->
+
+												<textarea lang="8076868" maxlength="150" name="txt-huifu-top"   class="txt-huifu txt-huifu-top" style="text-indent: 0px; height: 20px; resize: none;"></textarea>
+
+										</div>
+										<div class="box-r">
+											<a   lang="8076868"   class="pub-icons add-pub-btn add-pub-btn-unvalid">评论</a>
+											<a     class="loading-ico loading-ico-top pub-loading-top">发布中...</a>
+										</div>
+									</div>
+
+									<div class="tip-3"   style="display: block;">
+										<a   class="hiddenCom-Btn" lang="8076868"><em class="pinglun em2"></em><span>收起</span></a>
+									</div>
+									<div class="write-error-box-top">
+										<div class="write-error-desc"   style="display: none;"></div>
+									</div>
+								</div>
+								<input type="hidden"    value="1">
+								</div>
+
+
+
+							</div>
+                </div>
+              <div class="item">
+                    <div class="timeIntoPool">1457101440881000,1457102117787000</div>
+                        <div class="news-pic"><img    src="image/text.png" alt="抽屉新热榜" style="display: inline; cursor: -webkit-zoom-in;"></div>
+							<div class="null-item"></div>
+							<div class="news-content"   >
+								<div class="part1">
+                                    <a class="show-content" target="_blank"  >
+                                            自从跟大王学完python之后,感觉屌爆了。。。
+                                    </a>
+                                    <span class="content-source">-ww3.sinaimg.cn</span>
+                                    <a class="n2"><span class="content-kind">42区</span></a>
+								</div>
+
+                                <div class="part2" >
+									<a class="digg-a" title="推荐"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><b>7</b><i style="display:none">8076081</i></a>
+									<a class="discus-a"  title="" flag="true" onclick="Comment(this);"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span><b>11</b></a>
+									<a class="collect-a" title="加入私藏" ><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><b>私藏</b></a>
+									<a class="user-a"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><b>隔壁</b></a>
+									<span class="left time-into"><a class="time-a"  target="_blank"><b style="color: #e59373;">1小时36分钟前</b></a><i class="hot">入热榜</i></span>
+								 </div>
+                                <!--评论-->
+
+                                <div class="comment-box-area hide"   style="display: block;">
+								<div class="pinglun arrow"   style="left: 63px;"></div>
+								<a class="pinglun close-comt" title="关闭"   lang="8076868"></a>
+								<div class="corner comment-box"  >
+
+									<div class="loading-ico loading-ico-top"   style="margin-left: 230px; display: none;">加载中，请稍候...</div>
+									<div class="comment-box-top"   style="display: block;">
+										<div class="tip-1">最热评论(<span  >3</span>)</div>
+										<div class="tip-2"><a  target="_blank"><em class="pinglun em1"></em><span>去评论页面</span></a></div>
+									</div>
+									<!-- 评论树形 -->
+									<ul class="filetree comment-list-top-2 treeview"   style="background: none;">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>1</li>
+                                    </ul>
+									<!-- 谣言类别显示相信还是置疑选项 -->
+
+
+									<!-- 判断该新闻评论是否关闭 -->
+
+
+									<!-- 评论输入框和回复框 -->
+									<div class="huifu-top-box"   style="display: block;">
+										<div class="box-l txt-input-area-div-top corner no-corner-bottom">
+                                            <div     class="lab-comment-top" style="display: none;">回复  <span  ></span>:</div>
+											<!-- 针对谣言文本输入框无效 -->
+
+												<textarea lang="8076868" maxlength="150" name="txt-huifu-top"   class="txt-huifu txt-huifu-top" style="text-indent: 0px; height: 20px; resize: none;"></textarea>
+
+										</div>
+										<div class="box-r">
+											<a   lang="8076868"   class="pub-icons add-pub-btn add-pub-btn-unvalid">评论</a>
+											<a     class="loading-ico loading-ico-top pub-loading-top">发布中...</a>
+										</div>
+									</div>
+
+									<div class="tip-3"   style="display: block;">
+										<a   class="hiddenCom-Btn" lang="8076868"><em class="pinglun em2"></em><span>收起</span></a>
+									</div>
+									<div class="write-error-box-top">
+										<div class="write-error-desc"   style="display: none;"></div>
+									</div>
+								</div>
+								<input type="hidden"    value="1">
+								</div>
+
+
+
+							</div>
+                </div>
+              <div class="item">
+                    <div class="timeIntoPool">1457101440881000,1457102117787000</div>
+                        <div class="news-pic"><img    src="image/text.png" alt="抽屉新热榜" style="display: inline; cursor: -webkit-zoom-in;"></div>
+							<div class="null-item"></div>
+							<div class="news-content"   >
+								<div class="part1">
+                                    <a class="show-content" target="_blank"  >
+                                            自从跟大王学完python之后,感觉屌爆了。。。
+                                    </a>
+                                    <span class="content-source">-ww3.sinaimg.cn</span>
+                                    <a class="n2"><span class="content-kind">42区</span></a>
+								</div>
+
+                                <div class="part2" >
+									<a class="digg-a" title="推荐"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><b>7</b><i style="display:none">8076081</i></a>
+									<a class="discus-a"  title="" flag="true" onclick="Comment(this);"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span><b>11</b></a>
+									<a class="collect-a" title="加入私藏" ><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><b>私藏</b></a>
+									<a class="user-a"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><b>隔壁</b></a>
+									<span class="left time-into"><a class="time-a"  target="_blank"><b style="color: #e59373;">1小时36分钟前</b></a><i class="hot">入热榜</i></span>
+								 </div>
+                                <!--评论-->
+
+                                <div class="comment-box-area hide"   style="display: block;">
+								<div class="pinglun arrow"   style="left: 63px;"></div>
+								<a class="pinglun close-comt" title="关闭"   lang="8076868"></a>
+								<div class="corner comment-box"  >
+
+									<div class="loading-ico loading-ico-top"   style="margin-left: 230px; display: none;">加载中，请稍候...</div>
+									<div class="comment-box-top"   style="display: block;">
+										<div class="tip-1">最热评论(<span  >3</span>)</div>
+										<div class="tip-2"><a  target="_blank"><em class="pinglun em1"></em><span>去评论页面</span></a></div>
+									</div>
+									<!-- 评论树形 -->
+									<ul class="filetree comment-list-top-2 treeview"   style="background: none;">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>1</li>
+                                    </ul>
+									<!-- 谣言类别显示相信还是置疑选项 -->
+
+
+									<!-- 判断该新闻评论是否关闭 -->
+
+
+									<!-- 评论输入框和回复框 -->
+									<div class="huifu-top-box"   style="display: block;">
+										<div class="box-l txt-input-area-div-top corner no-corner-bottom">
+                                            <div     class="lab-comment-top" style="display: none;">回复  <span  ></span>:</div>
+											<!-- 针对谣言文本输入框无效 -->
+
+												<textarea lang="8076868" maxlength="150" name="txt-huifu-top"   class="txt-huifu txt-huifu-top" style="text-indent: 0px; height: 20px; resize: none;"></textarea>
+
+										</div>
+										<div class="box-r">
+											<a   lang="8076868"   class="pub-icons add-pub-btn add-pub-btn-unvalid">评论</a>
+											<a     class="loading-ico loading-ico-top pub-loading-top">发布中...</a>
+										</div>
+									</div>
+
+									<div class="tip-3"   style="display: block;">
+										<a   class="hiddenCom-Btn" lang="8076868"><em class="pinglun em2"></em><span>收起</span></a>
+									</div>
+									<div class="write-error-box-top">
+										<div class="write-error-desc"   style="display: none;"></div>
+									</div>
+								</div>
+								<input type="hidden"    value="1">
+								</div>
+
+
+
+							</div>
+                </div>
+              <div class="item">
+                    <div class="timeIntoPool">1457101440881000,1457102117787000</div>
+                        <div class="news-pic"><img    src="image/text.png" alt="抽屉新热榜" style="display: inline; cursor: -webkit-zoom-in;"></div>
+							<div class="null-item"></div>
+							<div class="news-content"   >
+								<div class="part1">
+                                    <a class="show-content" target="_blank"  >
+                                            自从跟大王学完python之后,感觉屌爆了。。。
+                                    </a>
+                                    <span class="content-source">-ww3.sinaimg.cn</span>
+                                    <a class="n2"><span class="content-kind">42区</span></a>
+								</div>
+
+                                <div class="part2" >
+									<a class="digg-a" title="推荐"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><b>7</b><i style="display:none">8076081</i></a>
+									<a class="discus-a"  title="" flag="true" onclick="Comment(this);"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span><b>11</b></a>
+									<a class="collect-a" title="加入私藏" ><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><b>私藏</b></a>
+									<a class="user-a"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><b>隔壁</b></a>
+									<span class="left time-into"><a class="time-a"  target="_blank"><b style="color: #e59373;">1小时36分钟前</b></a><i class="hot">入热榜</i></span>
+								 </div>
+                                <!--评论-->
+
+                                <div class="comment-box-area hide"   style="display: block;">
+								<div class="pinglun arrow"   style="left: 63px;"></div>
+								<a class="pinglun close-comt" title="关闭"   lang="8076868"></a>
+								<div class="corner comment-box"  >
+
+									<div class="loading-ico loading-ico-top"   style="margin-left: 230px; display: none;">加载中，请稍候...</div>
+									<div class="comment-box-top"   style="display: block;">
+										<div class="tip-1">最热评论(<span  >3</span>)</div>
+										<div class="tip-2"><a  target="_blank"><em class="pinglun em1"></em><span>去评论页面</span></a></div>
+									</div>
+									<!-- 评论树形 -->
+									<ul class="filetree comment-list-top-2 treeview"   style="background: none;">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>1</li>
+                                    </ul>
+									<!-- 谣言类别显示相信还是置疑选项 -->
+
+
+									<!-- 判断该新闻评论是否关闭 -->
+
+
+									<!-- 评论输入框和回复框 -->
+									<div class="huifu-top-box"   style="display: block;">
+										<div class="box-l txt-input-area-div-top corner no-corner-bottom">
+                                            <div     class="lab-comment-top" style="display: none;">回复  <span  ></span>:</div>
+											<!-- 针对谣言文本输入框无效 -->
+
+												<textarea lang="8076868" maxlength="150" name="txt-huifu-top"   class="txt-huifu txt-huifu-top" style="text-indent: 0px; height: 20px; resize: none;"></textarea>
+
+										</div>
+										<div class="box-r">
+											<a   lang="8076868"   class="pub-icons add-pub-btn add-pub-btn-unvalid">评论</a>
+											<a     class="loading-ico loading-ico-top pub-loading-top">发布中...</a>
+										</div>
+									</div>
+
+									<div class="tip-3"   style="display: block;">
+										<a   class="hiddenCom-Btn" lang="8076868"><em class="pinglun em2"></em><span>收起</span></a>
+									</div>
+									<div class="write-error-box-top">
+										<div class="write-error-desc"   style="display: none;"></div>
+									</div>
+								</div>
+								<input type="hidden"    value="1">
+								</div>
+
+
+
+							</div>
+                </div>
+              <div class="item">
+                    <div class="timeIntoPool">1457101440881000,1457102117787000</div>
+                        <div class="news-pic"><img    src="image/text.png" alt="抽屉新热榜" style="display: inline; cursor: -webkit-zoom-in;"></div>
+							<div class="null-item"></div>
+							<div class="news-content"   >
+								<div class="part1">
+                                    <a class="show-content" target="_blank"  >
+                                            自从跟大王学完python之后,感觉屌爆了。。。
+                                    </a>
+                                    <span class="content-source">-ww3.sinaimg.cn</span>
+                                    <a class="n2"><span class="content-kind">42区</span></a>
+								</div>
+
+                                <div class="part2" >
+									<a class="digg-a" title="推荐"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><b>7</b><i style="display:none">8076081</i></a>
+									<a class="discus-a"  title="" flag="true" onclick="Comment(this);"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span><b>11</b></a>
+									<a class="collect-a" title="加入私藏" ><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><b>私藏</b></a>
+									<a class="user-a"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><b>隔壁</b></a>
+									<span class="left time-into"><a class="time-a"  target="_blank"><b style="color: #e59373;">1小时36分钟前</b></a><i class="hot">入热榜</i></span>
+								 </div>
+                                <!--评论-->
+
+                                <div class="comment-box-area hide"   style="display: block;">
+								<div class="pinglun arrow"   style="left: 63px;"></div>
+								<a class="pinglun close-comt" title="关闭"   lang="8076868"></a>
+								<div class="corner comment-box"  >
+
+									<div class="loading-ico loading-ico-top"   style="margin-left: 230px; display: none;">加载中，请稍候...</div>
+									<div class="comment-box-top"   style="display: block;">
+										<div class="tip-1">最热评论(<span  >3</span>)</div>
+										<div class="tip-2"><a  target="_blank"><em class="pinglun em1"></em><span>去评论页面</span></a></div>
+									</div>
+									<!-- 评论树形 -->
+									<ul class="filetree comment-list-top-2 treeview"   style="background: none;">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>1</li>
+                                    </ul>
+									<!-- 谣言类别显示相信还是置疑选项 -->
+
+
+									<!-- 判断该新闻评论是否关闭 -->
+
+
+									<!-- 评论输入框和回复框 -->
+									<div class="huifu-top-box"   style="display: block;">
+										<div class="box-l txt-input-area-div-top corner no-corner-bottom">
+                                            <div     class="lab-comment-top" style="display: none;">回复  <span  ></span>:</div>
+											<!-- 针对谣言文本输入框无效 -->
+
+												<textarea lang="8076868" maxlength="150" name="txt-huifu-top"   class="txt-huifu txt-huifu-top" style="text-indent: 0px; height: 20px; resize: none;"></textarea>
+
+										</div>
+										<div class="box-r">
+											<a   lang="8076868"   class="pub-icons add-pub-btn add-pub-btn-unvalid">评论</a>
+											<a     class="loading-ico loading-ico-top pub-loading-top">发布中...</a>
+										</div>
+									</div>
+
+									<div class="tip-3"   style="display: block;">
+										<a   class="hiddenCom-Btn" lang="8076868"><em class="pinglun em2"></em><span>收起</span></a>
+									</div>
+									<div class="write-error-box-top">
+										<div class="write-error-desc"   style="display: none;"></div>
+									</div>
+								</div>
+								<input type="hidden"    value="1">
+								</div>
+
+
+
+							</div>
+                </div>
+              <div class="item">
+                    <div class="timeIntoPool">1457101440881000,1457102117787000</div>
+                        <div class="news-pic"><img    src="image/text.png" alt="抽屉新热榜" style="display: inline; cursor: -webkit-zoom-in;"></div>
+							<div class="null-item"></div>
+							<div class="news-content"   >
+								<div class="part1">
+                                    <a class="show-content" target="_blank"  >
+                                            自从跟大王学完python之后,感觉屌爆了。。。
+                                    </a>
+                                    <span class="content-source">-ww3.sinaimg.cn</span>
+                                    <a class="n2"><span class="content-kind">42区</span></a>
+								</div>
+
+                                <div class="part2" >
+									<a class="digg-a" title="推荐"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><b>7</b><i style="display:none">8076081</i></a>
+									<a class="discus-a"  title="" flag="true" onclick="Comment(this);"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span><b>11</b></a>
+									<a class="collect-a" title="加入私藏" ><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><b>私藏</b></a>
+									<a class="user-a"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><b>隔壁</b></a>
+									<span class="left time-into"><a class="time-a"  target="_blank"><b style="color: #e59373;">1小时36分钟前</b></a><i class="hot">入热榜</i></span>
+								 </div>
+                                <!--评论-->
+
+                                <div class="comment-box-area hide"   style="display: block;">
+								<div class="pinglun arrow"   style="left: 63px;"></div>
+								<a class="pinglun close-comt" title="关闭"   lang="8076868"></a>
+								<div class="corner comment-box"  >
+
+									<div class="loading-ico loading-ico-top"   style="margin-left: 230px; display: none;">加载中，请稍候...</div>
+									<div class="comment-box-top"   style="display: block;">
+										<div class="tip-1">最热评论(<span  >3</span>)</div>
+										<div class="tip-2"><a  target="_blank"><em class="pinglun em1"></em><span>去评论页面</span></a></div>
+									</div>
+									<!-- 评论树形 -->
+									<ul class="filetree comment-list-top-2 treeview"   style="background: none;">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>1</li>
+                                    </ul>
+									<!-- 谣言类别显示相信还是置疑选项 -->
+
+
+									<!-- 判断该新闻评论是否关闭 -->
+
+
+									<!-- 评论输入框和回复框 -->
+									<div class="huifu-top-box"   style="display: block;">
+										<div class="box-l txt-input-area-div-top corner no-corner-bottom">
+                                            <div     class="lab-comment-top" style="display: none;">回复  <span  ></span>:</div>
+											<!-- 针对谣言文本输入框无效 -->
+
+												<textarea lang="8076868" maxlength="150" name="txt-huifu-top"   class="txt-huifu txt-huifu-top" style="text-indent: 0px; height: 20px; resize: none;"></textarea>
+
+										</div>
+										<div class="box-r">
+											<a   lang="8076868"   class="pub-icons add-pub-btn add-pub-btn-unvalid">评论</a>
+											<a     class="loading-ico loading-ico-top pub-loading-top">发布中...</a>
+										</div>
+									</div>
+
+									<div class="tip-3"   style="display: block;">
+										<a   class="hiddenCom-Btn" lang="8076868"><em class="pinglun em2"></em><span>收起</span></a>
+									</div>
+									<div class="write-error-box-top">
+										<div class="write-error-desc"   style="display: none;"></div>
+									</div>
+								</div>
+								<input type="hidden"    value="1">
+								</div>
+
+
+
+							</div>
+                </div>
+              <div class="item">
+                    <div class="timeIntoPool">1457101440881000,1457102117787000</div>
+                        <div class="news-pic"><img    src="image/text.png" alt="抽屉新热榜" style="display: inline; cursor: -webkit-zoom-in;"></div>
+							<div class="null-item"></div>
+							<div class="news-content"   >
+								<div class="part1">
+                                    <a class="show-content" target="_blank"  >
+                                            自从跟大王学完python之后,感觉屌爆了。。。
+                                    </a>
+                                    <span class="content-source">-ww3.sinaimg.cn</span>
+                                    <a class="n2"><span class="content-kind">42区</span></a>
+								</div>
+
+                                <div class="part2" >
+									<a class="digg-a" title="推荐"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><b>7</b><i style="display:none">8076081</i></a>
+									<a class="discus-a"  title="" flag="true" onclick="Comment(this);"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span><b>11</b></a>
+									<a class="collect-a" title="加入私藏" ><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><b>私藏</b></a>
+									<a class="user-a"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><b>隔壁</b></a>
+									<span class="left time-into"><a class="time-a"  target="_blank"><b style="color: #e59373;">1小时36分钟前</b></a><i class="hot">入热榜</i></span>
+								 </div>
+                                <!--评论-->
+
+                                <div class="comment-box-area hide"   style="display: block;">
+								<div class="pinglun arrow"   style="left: 63px;"></div>
+								<a class="pinglun close-comt" title="关闭"   lang="8076868"></a>
+								<div class="corner comment-box"  >
+
+									<div class="loading-ico loading-ico-top"   style="margin-left: 230px; display: none;">加载中，请稍候...</div>
+									<div class="comment-box-top"   style="display: block;">
+										<div class="tip-1">最热评论(<span  >3</span>)</div>
+										<div class="tip-2"><a  target="_blank"><em class="pinglun em1"></em><span>去评论页面</span></a></div>
+									</div>
+									<!-- 评论树形 -->
+									<ul class="filetree comment-list-top-2 treeview"   style="background: none;">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>1</li>
+                                    </ul>
+									<!-- 谣言类别显示相信还是置疑选项 -->
+
+
+									<!-- 判断该新闻评论是否关闭 -->
+
+
+									<!-- 评论输入框和回复框 -->
+									<div class="huifu-top-box"   style="display: block;">
+										<div class="box-l txt-input-area-div-top corner no-corner-bottom">
+                                            <div     class="lab-comment-top" style="display: none;">回复  <span  ></span>:</div>
+											<!-- 针对谣言文本输入框无效 -->
+
+												<textarea lang="8076868" maxlength="150" name="txt-huifu-top"   class="txt-huifu txt-huifu-top" style="text-indent: 0px; height: 20px; resize: none;"></textarea>
+
+										</div>
+										<div class="box-r">
+											<a   lang="8076868"   class="pub-icons add-pub-btn add-pub-btn-unvalid">评论</a>
+											<a     class="loading-ico loading-ico-top pub-loading-top">发布中...</a>
+										</div>
+									</div>
+
+									<div class="tip-3"   style="display: block;">
+										<a   class="hiddenCom-Btn" lang="8076868"><em class="pinglun em2"></em><span>收起</span></a>
+									</div>
+									<div class="write-error-box-top">
+										<div class="write-error-desc"   style="display: none;"></div>
+									</div>
+								</div>
+								<input type="hidden"    value="1">
+								</div>
+
+
+
+							</div>
+                </div>
+              <div class="item">
+                    <div class="timeIntoPool">1457101440881000,1457102117787000</div>
+                        <div class="news-pic"><img    src="image/text.png" alt="抽屉新热榜" style="display: inline; cursor: -webkit-zoom-in;"></div>
+							<div class="null-item"></div>
+							<div class="news-content"   >
+								<div class="part1">
+                                    <a class="show-content" target="_blank"  >
+                                            自从跟大王学完python之后,感觉屌爆了。。。
+                                    </a>
+                                    <span class="content-source">-ww3.sinaimg.cn</span>
+                                    <a class="n2"><span class="content-kind">42区</span></a>
+								</div>
+
+                                <div class="part2" >
+									<a class="digg-a" title="推荐"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><b>7</b><i style="display:none">8076081</i></a>
+									<a class="discus-a"  title="" flag="true" onclick="Comment(this);"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span><b>11</b></a>
+									<a class="collect-a" title="加入私藏" ><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><b>私藏</b></a>
+									<a class="user-a"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><b>隔壁</b></a>
+									<span class="left time-into"><a class="time-a"  target="_blank"><b style="color: #e59373;">1小时36分钟前</b></a><i class="hot">入热榜</i></span>
+								 </div>
+                                <!--评论-->
+
+                                <div class="comment-box-area hide"   style="display: block;">
+								<div class="pinglun arrow"   style="left: 63px;"></div>
+								<a class="pinglun close-comt" title="关闭"   lang="8076868"></a>
+								<div class="corner comment-box"  >
+
+									<div class="loading-ico loading-ico-top"   style="margin-left: 230px; display: none;">加载中，请稍候...</div>
+									<div class="comment-box-top"   style="display: block;">
+										<div class="tip-1">最热评论(<span  >3</span>)</div>
+										<div class="tip-2"><a  target="_blank"><em class="pinglun em1"></em><span>去评论页面</span></a></div>
+									</div>
+									<!-- 评论树形 -->
+									<ul class="filetree comment-list-top-2 treeview"   style="background: none;">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>1</li>
+                                    </ul>
+									<!-- 谣言类别显示相信还是置疑选项 -->
+
+
+									<!-- 判断该新闻评论是否关闭 -->
+
+
+									<!-- 评论输入框和回复框 -->
+									<div class="huifu-top-box"   style="display: block;">
+										<div class="box-l txt-input-area-div-top corner no-corner-bottom">
+                                            <div     class="lab-comment-top" style="display: none;">回复  <span  ></span>:</div>
+											<!-- 针对谣言文本输入框无效 -->
+
+												<textarea lang="8076868" maxlength="150" name="txt-huifu-top"   class="txt-huifu txt-huifu-top" style="text-indent: 0px; height: 20px; resize: none;"></textarea>
+
+										</div>
+										<div class="box-r">
+											<a   lang="8076868"   class="pub-icons add-pub-btn add-pub-btn-unvalid">评论</a>
+											<a     class="loading-ico loading-ico-top pub-loading-top">发布中...</a>
+										</div>
+									</div>
+
+									<div class="tip-3"   style="display: block;">
+										<a   class="hiddenCom-Btn" lang="8076868"><em class="pinglun em2"></em><span>收起</span></a>
+									</div>
+									<div class="write-error-box-top">
+										<div class="write-error-desc"   style="display: none;"></div>
+									</div>
+								</div>
+								<input type="hidden"    value="1">
+								</div>
+
+
+
+							</div>
+                </div>
+              <div class="item">
+                    <div class="timeIntoPool">1457101440881000,1457102117787000</div>
+                        <div class="news-pic"><img    src="image/text.png" alt="抽屉新热榜" style="display: inline; cursor: -webkit-zoom-in;"></div>
+							<div class="null-item"></div>
+							<div class="news-content"   >
+								<div class="part1">
+                                    <a class="show-content" target="_blank"  >
+                                            自从跟大王学完python之后,感觉屌爆了。。。
+                                    </a>
+                                    <span class="content-source">-ww3.sinaimg.cn</span>
+                                    <a class="n2"><span class="content-kind">42区</span></a>
+								</div>
+
+                                <div class="part2" >
+									<a class="digg-a" title="推荐"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><b>7</b><i style="display:none">8076081</i></a>
+									<a class="discus-a"  title="" flag="true" onclick="Comment(this);"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span><b>11</b></a>
+									<a class="collect-a" title="加入私藏" ><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><b>私藏</b></a>
+									<a class="user-a"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><b>隔壁</b></a>
+									<span class="left time-into"><a class="time-a"  target="_blank"><b style="color: #e59373;">1小时36分钟前</b></a><i class="hot">入热榜</i></span>
+								 </div>
+                                <!--评论-->
+
+                                <div class="comment-box-area hide"   style="display: block;">
+								<div class="pinglun arrow"   style="left: 63px;"></div>
+								<a class="pinglun close-comt" title="关闭"   lang="8076868"></a>
+								<div class="corner comment-box"  >
+
+									<div class="loading-ico loading-ico-top"   style="margin-left: 230px; display: none;">加载中，请稍候...</div>
+									<div class="comment-box-top"   style="display: block;">
+										<div class="tip-1">最热评论(<span  >3</span>)</div>
+										<div class="tip-2"><a  target="_blank"><em class="pinglun em1"></em><span>去评论页面</span></a></div>
+									</div>
+									<!-- 评论树形 -->
+									<ul class="filetree comment-list-top-2 treeview"   style="background: none;">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>1</li>
+                                    </ul>
+									<!-- 谣言类别显示相信还是置疑选项 -->
+
+
+									<!-- 判断该新闻评论是否关闭 -->
+
+
+									<!-- 评论输入框和回复框 -->
+									<div class="huifu-top-box"   style="display: block;">
+										<div class="box-l txt-input-area-div-top corner no-corner-bottom">
+                                            <div     class="lab-comment-top" style="display: none;">回复  <span  ></span>:</div>
+											<!-- 针对谣言文本输入框无效 -->
+
+												<textarea lang="8076868" maxlength="150" name="txt-huifu-top"   class="txt-huifu txt-huifu-top" style="text-indent: 0px; height: 20px; resize: none;"></textarea>
+
+										</div>
+										<div class="box-r">
+											<a   lang="8076868"   class="pub-icons add-pub-btn add-pub-btn-unvalid">评论</a>
+											<a     class="loading-ico loading-ico-top pub-loading-top">发布中...</a>
+										</div>
+									</div>
+
+									<div class="tip-3"   style="display: block;">
+										<a   class="hiddenCom-Btn" lang="8076868"><em class="pinglun em2"></em><span>收起</span></a>
+									</div>
+									<div class="write-error-box-top">
+										<div class="write-error-desc"   style="display: none;"></div>
+									</div>
+								</div>
+								<input type="hidden"    value="1">
+								</div>
+
+
+
+							</div>
+                </div>
+            </div>
+          <!--分页-->
+            <div>
+              <nav>
+                <ul class="pagination pg-bg pagination-lg">
+                  <li>
+                    <a href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">7</a></li>
+                   <li><a href="#">8</a></li>
+                   <li><a href="#">9</a></li>
+                   <li><a href="#">10</a></li>
+                  <li>
+                    <a href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!--test-->
+
+        </div>
+        <div class="content-R">
+            <!--聊天室-->
+          <div class="chat-area" style="background-image: url('image/test.png');"></div>
+          <div class="top-band">
+              <em class="top-band-type">
+                  <em>24小时全部</em>
+                  <span style="color: red;"> TOP 10</span>
+              </em>
+              <div class="chat-area" style="background-image: url('image/ttt.png');"></div>
+          </div>
+            <!--top 10-->
+          <div class=""></div>
+        </div>
+
+          <!--foot-->
+        <div class="text-foot">
+            <div class="foot-nav">
+                <a>关于我们</a>
+                <span>|</span>
+                <a>联系我们</a>
+                <span>|</span>
+                <a>服务条款</a>
+                <span>|</span>
+                <a>隐私政策</a>
+                <span>|</span>
+                <a>抽匣专属</a>
+                <span>|</span>
+                <a>下载客户端</a>
+                <span>|</span>
+                <a>意见与反馈</a>
+                <span>|</span>
+                <a>友情链接</a>
+
+            </div>
+        </div>
+      </div>
+    </div>
+  <!--对话框-->
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">分享新发现</h4>
+          </div>
+          <div class="modal-body">
+            <div class="dialog-content corner-bottom">
+		<div class="tab-tags nobrder W" id="tabs">
+
+				<a class="tb H w-active color" id="pubTabZixun">链接</a>
+				<a class="tb H" id="pubTabDuanzi">文字</a>
+				<a class="tb H" id="pubTabPic">图片</a>
+				<div class="tags"></div>
+		</div>
+		<div class="dialog-main-content" id="dialog-main-content">
+			<!-- 资讯区域 -->
+
+			<div class="publish-content-zixun" id="publish-content-zixun">
+				<div class="tab-alt">添加链接</div>
+				<div class="p1">
+					<div class="txt-input-area float-left corner" style="width:426px;" id="txt-zixun-area">
+						<input type="text" name="txt-zixun" id="txt-zixun" class="small-txt-input" style="color: rgb(51, 51, 51); width: 420px; border: 1px solid rgb(204, 220, 239); background-color: rgb(255, 255, 255);">
+						<label id="lab-zixun" for="txt-zixun" style="display: block;">http://</label>
+						<input id="url" name="url" type="hidden" value="">
+					</div>
+					<div class="button-container" id="zixun-button-container">
+						<a class="pub-icons pub-btn pub-btn-unvalid"   id="add-pub-btn0">获取标题</a>
+						<a class="loading martop10"   id="add-pub-loading0" style="display: none;"></a>
+					</div>
+
+				</div>
+
+			<div id="zixun-big-area">
+				<div class="tab-alt martop8">标题</div>
+				<div class="small-txt-input-area corner" id="zixun-http-area">
+					<input name="txt-zixun-content" id="txt-zixun-content" maxlength="150" class="small-txt-input w496" disabled="" style="background-color: rgb(236, 233, 216);">
+				</div>
+				<div class="tab-alt martop8">添加摘要（选填）</div>
+				<div class="txt-input-area corner" style="padding:6px;">
+					<textarea id="txt-zhaiyao" name="txt-zhaiyao" maxlength="120" disabled="" style="background-color: rgb(236, 233, 216);"></textarea>
+				</div>
+				<div class="toclass-btn-area">
+					<span class="tospan">发布到:</span>
+
+
+					<a class="pub-icons toclass-btn toclass-btn-valid"   id="to-btn-zixun" lang="1">42区</a>
+					<a class="pub-icons toclass-btn toclass-btn-unvalid"   id="to-btn-duanzi" lang="2">段子</a>
+					<!--
+					<a class="pub-icons toclass-btn toclass-btn-unvalid"   id="to-btn-yaoyan"  lang="3">谣言</a>
+					-->
+					<a class="pub-icons toclass-btn toclass-btn-unvalid"   id="to-btn-pic" lang="4">图片</a>
+					<a class="pub-icons toclass-btn un1024 toclass-btn-unfavor-unvalid"   id="to-btn-tec" lang="100">挨踢1024</a>
+					<!--
+					<a class="pub-icons toclass-btn unfavor toclass-btn-unfavor-unvalid"   id="to-btn-unfavor" lang="5">公众场合不宜</a>
+					-->
+					<a class="pub-icons toclass-btn toclass-btn-unvalid"   id="to-btn-ask" lang="151">你问我答</a>
+
+
+
+				</div>
+				<div class="dialog-buttonpane white bottom-null" id="dialog-buttonpane0">
+					<div class="write-error-box" id="write-error-box0">
+						<div class="write-error-desc"></div>
+					</div>
+					<div class="button-container">
+						<a class="pub-clear-btn"   id="clear-btn-link">清空</a>
+						<a class="pub-icons new-pub-btn new-pub-btn-unvalid"   id="pub-btn0">发&nbsp;布</a>
+						<a class="loading"   id="pub-loading0">发布中...</a>
+					</div>
+					<div class="write-error" style="display: none;">标题已超出<span id="moreLength0">10</span>个字</div>
+				</div>
+			</div>
+
+				<div style="height:30px;clear:both;overflow:hidden">
+
+				</div>
+			</div>
+			<!-- 段子区域 -->
+			<div class="publish-content-duanzi" id="publish-content-duanzi" style="display: none;">
+				<div class="txt-input-area corner no-corner-bottom">
+					<textarea name="txt-duanzi" id="txt-duanzi" style="background-color: rgb(255, 255, 255);"></textarea>
+					<label id="lab-duanzi" for="txt-duanzi" style="">发布段子...</label>
+				</div>
+				<div class="dialog-buttonpane corner-bottom"  >
+
+					<div class="write-length">还可以输入<span id="showLength1">150</span>字</div>
+					<div class="write-error" style="display: none;">标题已超出<span id="moreLength1">10</span>个字</div>
+				</div>
+
+				<div class="toclass-btn-area">
+					<span class="tospan">发布到:</span>
+
+					<a class="pub-icons toclass-btn toclass-btn-valid"   id="to-btn-duanzi2" lang="2">段子</a>
+					<a class="pub-icons toclass-btn toclass-btn-unvalid"   id="to-btn-ask2" lang="151">你问我答</a>
+					<!--
+					<a class="pub-icons toclass-btn toclass-btn-unvalid"   id="to-btn-yaoyan2" lang="3">谣言</a>
+					-->
+
+
+
+				</div>
+				<div class="dialog-buttonpane white bottom-null"  >
+					<div class="write-error-box" id="write-error-box1">
+						<div class="write-error-desc"></div>
+					</div>
+					<div class="button-container">
+						<a class="pub-clear-btn"   id="clear-btn-wanzi">清空</a>
+						<a class="pub-icons new-pub-btn new-pub-btn-unvalid"   id="pub-btn1">发&nbsp;布</a>
+						<a class="loading"   id="pub-loading1">发布中...</a>
+					</div>
+
+				</div>
+				<div style="height:30px;clear:both;overflow:hidden">
+
+				</div>
+
+			</div>
+
+			<!-- 图片区域 -->
+			<div class="publish-content-pic" id="publish-content-pic" style="display: none;">
+				<div class="tab-alt" id="img-alt-title">添加图片</div>
+
+					<div class="txt-input-area corner" id="upload-img-area">
+					<form enctype="multipart/form-data" method="post" target="uploadIframe" action="/link/pic/upload" id="uploadPicFrm">
+						<a class="pub-icons line-block add-pub-btn add-pub-btn-valid"   id="add-pub-btn2">上传<input type="file" name="imgUrl" id="imgUrl" size="1" hidefocus="true"></a>
+						<span class="imgRule">支持jpg、jpeg、gif、png格式，且不超过5MB</span>
+						<a class="loading"   id="add-pub-loading2" style="display: none;">上传中...</a>
+						<input type="hidden" id="timeHidden" name="identifie" value="">
+					</form>
+					</div>
+
+				<iframe id="uploadIframe" name="uploadIframe" scrolling="no" height="0px" frameborder="0" style="display:none" src="/blank.html"></iframe>
+				<div class="txt-input-area corner" id="show-img-area" style="display: none;">
+					<img id="upload-img" src="">
+					<a   class="repeat-upload" id="repeat-upload-btn">重新上传</a>
+				</div>
+				<div class="txt-input-area martop10 corner no-corner-bottom">
+					<textarea name="txt-img" id="txt-img" style="background-color: rgb(255, 255, 255);"></textarea>
+					<label id="lab-img" for="txt-img" style="">请输入图片描述...</label>
+				</div>
+				<div class="dialog-buttonpane corner-bottom"   >
+					<!--
+					<div class="pic-yellow"><input type="checkbox" name="boxYellow" id="boxYellow" /><label for="boxYellow">这张图片很黄很暴力</label></div>
+					-->
+					<div class="write-length">还可以输入<span id="showLength2">150</span>字</div>
+					<div class="write-error" style="display: none;">标题已超出<span id="moreLength2">10</span>个字</div>
+				</div>
+				<div class="toclass-btn-area">
+					<span class="tospan">发布到:</span>
+
+
+					<a class="pub-icons toclass-btn toclass-btn-valid"   id="to-btn-pic2" lang="4">图片</a>
+					<!--
+					<a class="pub-icons toclass-btn unfavor toclass-btn-unfavor-unvalid"   id="to-btn-unfavor2" lang="5">公众场合不宜</a>
+					-->
+					<a class="pub-icons toclass-btn toclass-btn-unvalid"   id="to-btn-ask3" lang="151">你问我答</a>
+
+
+
+				</div>
+				<div class="dialog-buttonpane white bottom-null"   >
+					<div class="write-error-box" id="write-error-box2">
+						<div class="write-error-desc"></div>
+					</div>
+					<div class="button-container">
+						<a class="pub-clear-btn"   id="clear-btn-pic">清空</a>
+						<a class="pub-icons new-pub-btn new-pub-btn-unvalid"   id="pub-btn2">发&nbsp;布</a>
+						<a class="loading"   id="pub-loading2">发布中...</a>
+					</div>
+
+				</div>
+				<div style="height:30px;clear:both;overflow:hidden">
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#top" title="回到顶部" class="icon-main hide" id="gotop" style="left: 1202px; display: block;"></a>
+
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            Init();
+        });
+        function Init(){
+//            返回顶部
+          $(window).scroll(function(){
+            var scrollTop = $(window).scrollTop();
+            if(scrollTop > 50){
+              $('#gotop').removeClass('hide');
+            }else{
+              $('#gotop').addClass('hide');
+            };
+
+          });
+        };
+
+        function Comment(ths){
+
+            if($(ths).attr('flag') == 'true'){
+
+                $(ths).parent().siblings().each(function(){
+                  $(this).removeClass('hide');
+                });
+                $(ths).attr('flag','false');
+
+            }else{
+                $(ths).parent().siblings().each(function(){
+                  $(this).addClass('hide');
+                });
+                $(ths).attr('flag','true');
+            }
+        };
+    </script>
+  </body>
+</html>

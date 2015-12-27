@@ -1,0 +1,21 @@
+软件新增功能：
+文件上传(文件存在校验）
+文件md5校验
+用户空间配额
+进度条
+删除文件
+ls功能
+
+
+使用方法
+server: python server/bin/ftpserver start
+client: python client/bin/ftp -s ip -p port
+
+#客户端命令
+client:ls file 
+	
+	   put filename
+
+       get filename
+
+	   rm  filename

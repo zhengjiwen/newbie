@@ -1,0 +1,261 @@
+.w{
+    min-height: 100%;
+    margin-bottom: 5px;
+}
+.pg-header{
+    color: #fff;
+    height: 48px;
+    line-height: 34px;
+    min-width: 1200px;
+    background: rgba(0,0,0,0.8);
+    background: -moz-linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(0,0,0,0.8)), color-stop(1, rgba(0,0,0,0.8)));
+    background: -webkit-linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+    background: -o-linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+    background: -ms-linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
+    /* border-bottom: 1px solid #C9D3D3; */
+}
+.pg-header a{
+    text-decoration: none;
+}
+.pg-header .top-logo{
+    margin: 8px 30px;
+    font-size:19px;
+}
+.pg-header .top-menu{
+    /* border-left: 0px solid #ddd; */
+}
+
+.pg-header .top-menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pg-header .top-menu ul li{
+    float: left;
+    padding: 6px 30px;
+    height: 35px;
+    line-height: 35px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.pg-header .top-menu ul li.active {
+    border-bottom: 1px solid #ddd;
+    background-color: rgb(171, 170, 170);
+}
+.pg-header a{
+    color:#fff !important;
+}
+
+/****?ㄓ2?車??∫D??⊿?a那?****/
+.pg-header .top-account{
+    margin-right:20px;
+}
+.pg-header .top-account .login-name{
+    padding:0 15px;
+    font-size: 16px;
+}
+.pg-header .top-account ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.pg-header .top-account li{
+    float: left;
+    padding: 7px 30px;
+    margin-right: 2px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.pg-header .top-account .top-menu-item{
+    position:relative;
+}
+
+.pg-header .top-account .child-menu{
+    background: rgba(0,0,0,0.8);
+    position:absolute;
+    width:150px;
+    /*border-top:2px solid #c9033b;*/
+    z-index:9999;
+    right: 25px;
+}
+
+
+.pg-header .top-account .child-menu ul li{
+    height: 38px;
+    line-height:38px;
+    padding: 0px;
+    width:100%;
+}
+.pg-header .top-account .child-menu ul li:hover{
+    background-color: rgba(0,0,0,0.8);
+
+}
+.pg-header .top-account .child-menu ul li a{
+    margin:0 10px;
+    font-size:14px;
+    color:#fff;
+    text-decoration: none;
+}
+/****?ㄓ2?車??∫D??⊿?芍那?****/
+
+/****?ㄓ2????¯?a那?****/
+.pg-header .top-search{
+    margin-right: 104px;
+}
+.pg-header .top-search .search-wrapper{
+    margin: 8px 0px;
+    height: 31px;
+    background-color:#fff;
+    line-height: 30px;
+}
+.pg-header .top-search .search-wrapper .input{
+    border: 0px;
+    height: 22px;
+    display:inline-block;
+    margin: 5px 0px 0px 9px;
+    padding: 0px 1px 0px 0px;
+}
+
+.pg-header .top-search .search-wrapper .btn{
+    width: 32px;
+    height: 31px;
+    display:inline-block;
+    color:#666;
+    font-size: 21px;
+    padding: -7px 14px;
+    /* border-left: 2px solid #999; */
+}
+
+/****?ㄓ2????¯?芍那?****/
+
+
+
+/****?迆豕Y℅車2角2?米ㄓ?a那?****/
+.pg-body{
+
+}
+
+.pg-body .body-tree-menu{
+    position: absolute;
+    bottom: 0;
+    top: 48px;
+    left:2px;
+    overflow: auto;
+    border-left: 0;
+    background-color:#f2f2f2;
+    width:260px;
+    overflow: auto;
+}
+
+/*1|?邦2?米ㄓ*/
+.scalable-menu-title .summary-title{
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+    padding:10px;
+}
+
+
+.scalable-menu-body{
+    cursor:pointer;
+}
+.scalable-menu-body a{
+    color: #000;
+}
+.scalable-menu-body .item{
+
+}
+
+.scalable-menu-body .item .title{
+    padding:10px 10px;
+    background: #ddd url('../img/layout/gradient.png') repeat-x;
+}
+.scalable-menu-body .item .title span{
+    margin-left:5px;
+}
+.scalable-menu-body .item .body .option{
+    border-left:3px solid transparent;
+    line-height:30px;
+    padding:0 20px;
+    display:block;
+    height:30px;
+}
+
+.scalable-menu-body .item .body .option:hover{
+    background-color:#D3D3D3;
+    border-left-color:rgba(0,0,0,0.8);
+    font-weight: bold;
+}
+
+.scalable-menu-body .item .body .option.selected{
+    background-color:#D3D3D3;
+    border-left-color:rgba(0,0,0,0.8);
+    font-weight: bold;
+}
+
+.scalable-menu-body .item .body .option .display{
+    display:inline-block;
+    margin-left:8px;
+}
+
+/****?迆豕Y℅車2角2?米ㄓ?芍那?****/
+
+/****米㊣?～?﹞???a那?****/
+.pg-body  .body-crumbs{
+    position: absolute;
+    min-width:920px;
+    top: 48px;
+    left: 263px;
+    right: 0;
+    height: 42px;
+    background: url('../img/layout/bc_bg.gif') repeat-x;
+    color: #9b9b9b;
+    overflow: hidden;
+    border-bottom: 1px solid #888;
+    border-left: 1px solid #888;
+}
+
+.pg-body  .body-crumbs ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left:15px;
+}
+.pg-body  .body-crumbs li{
+    float:left;
+    line-height: 41px;
+    padding:0 10px;
+}
+
+.pg-body  .body-crumbs li a{
+    display: inline-block;
+    /*background: url('../img/layout/bc_separator.png') no-repeat right;*/
+    padding-right: 31px;
+    text-decoration: none;
+    color: #454545;
+}
+/****米㊣?～?﹞???芍那?****/
+
+/****?迆豕Y?¯?迆豕Y?a那?****/
+.pg-body .body-content{
+    min-width:920px;
+    padding-bottom: 30px;
+    border-right: 0;
+    border: 1px solid #888;
+    position: absolute;
+    bottom: 0;
+    top: 47px;
+    left: 263px;
+    right: 0;
+    overflow: auto;
+}
+.pg-body .body-content .main-content{
+    width:100%;
+
+}
+/****?迆豕Y?¯?迆豕Y?芍那?****/

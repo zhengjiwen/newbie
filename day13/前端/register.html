@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <title>web</title>
+        <link rel="stylesheet" type="text/css" href="css/testcss.css">
+        <style type="text/css"> 
+			#code {width:100px; height:20px;}
+			#div1{
+					position:absolute;
+					left:350px;
+				}
+			#divid{
+				position:absolute;
+				left:300px;
+				top:150px;
+				}
+			#div2{
+				position:absolute;
+				left:300px;
+				bottom:50px;
+				}
+			#imgid{
+				position:absolute;
+				left:700px;
+				top:150px;
+
+					}
+        	</style >
+    </head>
+    <body>
+        <div>
+            <h1 id="div1">用户注册</h1>   
+        </div>
+        <div id="divid" border="1">
+        		<p>
+        			<label for="eml">手机号</label>
+        			<span><input id="eml" placeholder="可用于登录和找回密码"  name="email" maxlength="11" autocomplete="off" type="text"></span>
+        		</p>
+        		<p>
+        			<label for="psw">密码</label>
+        			<span><input id="psw" placeholder="密码" name="passwd" type="text" autocomplete="off"></span>	
+        		</p>
+        		<p>
+        			<label for="code">验证码</label>
+        			<span><input id="code" placeholder="验证码" name="verifyCode" type="text"></span>	
+        			<span><input id="codeid" value="获取短信验证码"  type="button" autocomplete="off"></span>
+        		</p>
+        		<p>
+        			<label for="isAgree">阅读并接受</label>
+        			<span><input id="isAgree" name="Agree" checked="checked" autocomplete="off" type="checkbox"></span>
+        			<a target="_blank" href="protocol.html">《用户协议》</a>
+        		</p>
+        		<p>
+        			<input id="submit" value="注册" type="submit">
+        		</p>
+        </div>
+		<div>
+			<img id="imgid" height="300" width="500" src="image/ttt.png"  alt="上海鲜花港 - 郁金香" />
+		</div>
+        <div id="div2">
+        		<footer>
+        			<p>2016</p>
+        		</footer>
+        </div>
+	</body>
+</html>
